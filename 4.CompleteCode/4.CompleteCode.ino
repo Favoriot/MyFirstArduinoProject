@@ -42,7 +42,7 @@ void setup() {
   if(!wifi.begin(2, 3))
   {
     Serial.println(F("Error talking to shield"));
-    while(1);
+    while(2000);
   }
   
   Serial.println(wifi.firmwareVersion());
@@ -55,7 +55,7 @@ void setup() {
   if(!wifi.connectAP(ssid, pass))
   {
     Serial.println(F("Error connecting to WiFi"));
-    while(1);
+    while(2000);
   } 
   
   Serial.print(F("Connected to "));Serial.println(wifi.SSID());
