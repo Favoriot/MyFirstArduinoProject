@@ -2,7 +2,7 @@
  *    1. Your wifi SSID
  *    2. Your wifi password
  *    3. Your API key (can be obtained from the account setting in favoriot platform)
- *    4. Your device ID (in void dataStream() )
+ *    4. Your device developer ID (in void dataStream() )
  * Once done, you may compile and upload this code and check the data stream in your favoriot platform.
  * Remember, to retrieve the temperature data you have to press the push button!
  * Goodluck!
