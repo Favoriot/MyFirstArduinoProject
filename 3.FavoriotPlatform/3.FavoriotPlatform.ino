@@ -4,7 +4,7 @@
  */
 
 String apikey = "Your API key";    // replace with your api key from the FAVORIOT platform account setting
-char serverAdd[] = "api.favoriot.com";
+char serverAdd[] = "apiv2.favoriot.com";
 datatype yourData = “ “ ;
 
 void loop() {
@@ -19,8 +19,8 @@ void dataStream()
   
   if (client.connect(serverAdd, 80)) {
     // Make a HTTP request:
-    client.println("POST /v1/streams HTTP/1.1");
-    client.println("Host: api.favoriot.com");
+    client.println("POST /v2/streams HTTP/1.1");
+    client.println("Host: apiv2.favoriot.com");
     client.print(String("apikey: "));
     client.println(apikey);
     client.println("Content-Type: application/json");
