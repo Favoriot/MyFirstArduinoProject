@@ -24,7 +24,7 @@ ESP8266Client client;
 int sensorValue = 0;
 int celcius = 0;
 unsigned long start, finished, elapsed;
-String apikey = "Your API key";    // **replace with your api key from the FAVORIOT platform account setting
+String apikey = "rw-apikey/accesstoken";    // **replace with your api key from the FAVORIOT platform account setting
 char serverAdd[] = "apiv2.favoriot.com";
                         
 void setup() {
@@ -86,7 +86,7 @@ void loop() {
 void dataStream(int celcius)
 { 
   // Json Data to send to Platform
-  String json = "{\"device_developer_id\":\"Insert your device_id from FAVORIOT platform here\",\"data\":{\"Temperature\":\""+String(celcius)+ "\"}}";
+  String json = "{\"device_developer_id\":\"deviceDefault@favoriot\",\"data\":{\"Temperature\":\""+String(celcius)+ "\"}}";
   // display temperature value
   Serial.println("\n        TEMPERATURE : " + String(celcius)+ " Celcius");  
   
